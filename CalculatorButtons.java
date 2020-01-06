@@ -1,14 +1,14 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+    This class creates all the buttons to be inputted into the GridPane and 
+    perform any manipulation needed for the color of the buttons.
+*/
+
 package calculator;
 
 import javafx.scene.control.Button;
 
 /**
- * @author rober
+ * @author Robert Denhardt
  */
 public class CalculatorButtons {
     public static Button[] numberButtons = {
@@ -31,6 +31,7 @@ public class CalculatorButtons {
         new Button(" C ")
     };
     
+    // Sets the color of the button to white
     public static void setInitialStyle(Button currButton, String buttonSize) {
         currButton.setStyle(
                     "-fx-background-color: white;" + 
@@ -39,6 +40,7 @@ public class CalculatorButtons {
             );
     }
     
+    // Sets the color of the button to gray
     public static void setButtonColor(Button currButton, String buttonSize, String color) {
         currButton.setStyle(
                     String.format("-fx-background-color: %s;", color) + 
